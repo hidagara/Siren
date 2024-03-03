@@ -66,7 +66,7 @@ extension APIManager {
     /// Creates and performs a URLRequest against the iTunes Lookup API.
     ///
     /// - returns APIModel: The decoded JSON as an instance of APIModel.
-    func performVersionCheckRequest() async throws -> APIModel {
+    public func performVersionCheckRequest() async throws -> APIModel {
         guard bundleID != nil else {
             throw KnownError.missingBundleID
         }
